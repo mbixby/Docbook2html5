@@ -3,8 +3,8 @@
 ##Usage##
 * Download and open docbook2html5.jar file. 
 * Select the input files (Open file). 
-* Choose transformation mode (Docbook or Docbook Slides) and hit the Tranform button.
-* It may take a couple of minutes for the process to complete.
+* Choose transformation mode (Docbook or Docbook Slides)
+* and hit the Tranform button (It may take a couple of minutes for the process to complete).
 
 ##Team##
 This was a course project developed by these awesome people:
