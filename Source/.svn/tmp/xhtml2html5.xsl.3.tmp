@@ -1,173 +1,0 @@
-<<<<<<< .mine
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-                xmlns:html="http://www.w3.org/1999/xhtml" 
-                version="1.0"
-                xmlns="http://www.w3.org/1999/xhtml"
-                exclude-result-prefixes="html">
-
-	<xsl:output method="xml" 
-				encoding="utf-8" 
-				omit-xml-declaration="yes" 
-				indent="yes"/>
-
-
-
-	<!-- NOTES:
-	Please use 4 spaces for tabs, comment new templates and keep the style
-		overally nice and clean.
-	Use Skype or Google Code To-do to keep everybody on track with what you're
-		working on
-	-->
-
-
-
-	<!-- Add correct doctype -->
-   	<xsl:variable name="doctype">
-    	<xsl:text>&lt;!DOCTYPE html&gt;</xsl:text>
-   	</xsl:variable>
-	<xsl:template match="/">
-       <xsl:value-of select="$doctype" disable-output-escaping="yes"/>
-       <xsl:apply-templates select="node()"/>
-   </xsl:template>    
-
-
-
-	<!-- Copy all nodes recursively and apply templates -->
-	<xsl:template match="@*|node()">
-		<xsl:copy>
-			<xsl:apply-templates select="@*|node()"/>
-		</xsl:copy>
-	</xsl:template>
-
-
-
-	<!-- Adds base.css style  -->
-	<xsl:template match="html:head">
-       	<xsl:copy>
-			<xsl:apply-templates/>
-			<xsl:element name="link">
-				<xsl:attribute name="rel">
-			    	<xsl:value-of select="'stylesheet'"/>
-			  	</xsl:attribute>
-				<xsl:attribute name="href">
-			    	<xsl:value-of select="'css/base.css'"/>
-			  	</xsl:attribute>
-				<xsl:attribute name="type">
-			    	<xsl:value-of select="'text/css'"/>
-			  	</xsl:attribute>
-			</xsl:element>
-		</xsl:copy>
-	</xsl:template>
-
-
-
-   <!-- Changing div class='header' to <header> -->
-   <xsl:template match="html:div[@class='header']" priority="1">
-       <xsl:element name="header">
-	    	<xsl:apply-templates select="@*|node()"/>
-	  </xsl:element>
-   </xsl:template>
-
-   <!-- Changing div class='nav' to <nav> -->
-   <xsl:template match="html:div[@class='nav']" priority="1">
-       <xsl:element name="nav">
-           <xsl:apply-templates select="* | text()"/>
-       </xsl:element>
-   </xsl:template>
-
-   <!-- Changing div class='article' to <article> -->
-   <xsl:template match="html:div[@class='article']" priority="1">
-       <xsl:element name="article">
-           <xsl:apply-templates select="* | text()"/>
-       </xsl:element>
-   </xsl:template>
-
-   <!-- Changing div class='section' to <section> -->
-   <xsl:template match="html:div[@class='section']" priority="1">
-       <xsl:element name="section">
-           <xsl:apply-templates select="* | text()"/>
-       </xsl:element>
-   </xsl:template>
-
-   <!-- Changing div class='aside' to <aside> -->
-   <xsl:template match="html:div[@class='aside']" priority="1">
-       <xsl:element name="aside">
-           <xsl:apply-templates select="* | text()"/>
-       </xsl:element>
-   </xsl:template>
-
-   <!-- Changing div class='footer' to <footer> -->
-   <xsl:template match="html:div[@class='footer']" priority="1">
-       <xsl:element name="footer">
-           <xsl:apply-templates select="* | text()"/>
-       </xsl:element>
-   </xsl:template>
-
-
-
-	<!-- DL/DT/DD fixes -->
-  	<xsl:template match="html:dl">
-      <xsl:element name="ul">
-        <xsl:apply-templates select="* | text()"/> 
-      </xsl:element>
-  	</xsl:template>
-  
-  	<xsl:template match="html:dt">
-      <xsl:element name="li">
-        <xsl:apply-templates select="* | text()"/>        
-      </xsl:element>
-  	</xsl:template>
-  
-  	<xsl:template match="html:dd">
-      <xsl:element name="ul">
-        <xsl:apply-templates select="* | text()"/> 
-      </xsl:element>
-  	</xsl:template>
-
-
-
-	<!-- Replace obsolete align/valign attribute with class="align" -->
-	<xsl:template match="@align[contains(.,'left')]">
-	  <xsl:attribute name="class">
-	    <xsl:value-of select="'align_left'"/>
-	  </xsl:attribute>
-	</xsl:template>
-	<xsl:template match="@align[contains(.,'center')]">
-	  <xsl:attribute name="class">
-	    <xsl:value-of select="'align_center'"/>
-	  </xsl:attribute>
-	</xsl:template>
-	<xsl:template match="@align[contains(.,'right')]">
-	  <xsl:attribute name="class">
-	    <xsl:value-of select="'align_right'"/>
-	  </xsl:attribute>
-	</xsl:template>
-	<xsl:template match="@valign">
-	  <xsl:attribute name="class">
-	    <xsl:value-of select="'vertical_align'"/>
-	  </xsl:attribute>
-	</xsl:template>
-
-
-
-	<!-- Removes empty <a> elements -->
-	<xsl:template match="html:a[. = '']">
-	</xsl:template>
-	
-
-
-	<!-- Replaces <ul> inside another <ul> with <li><ul/></li> -->
-	<xsl:template match="html:ul/html:ul">
-		<li>
-			<xsl:copy>
-				<xsl:apply-templates select="@*|node()"/>
-			</xsl:copy>
-		</li>
-	</xsl:template>
-	
-	
-
-=======
-<?xml version="1.0" encoding="UTF-8"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"                 xmlns:html="http://www.w3.org/1999/xhtml"                 version="1.0"                xmlns="http://www.w3.org/1999/xhtml"                exclude-result-prefixes="html">	<xsl:output method="xml" 				encoding="utf-8" 				omit-xml-declaration="yes" 				indent="yes"/>	<!-- NOTES:	Please use 4 spaces for tabs, comment new templates and keep the style		overally nice and clean.	Use Skype or Google Code To-do to keep everybody on track with what you're		working on	-->	<!-- Add correct doctype -->   	<xsl:variable name="doctype">    	<xsl:text>&lt;!DOCTYPE html&gt;</xsl:text>   	</xsl:variable>	<xsl:template match="/">       <xsl:value-of select="$doctype" disable-output-escaping="yes"/>       <xsl:apply-templates select="node()"/>   </xsl:template>    	<!-- Copy all nodes recursively and apply templates -->	<xsl:template match="@*|node()">		<xsl:copy>			<xsl:apply-templates select="@*|node()"/>		</xsl:copy>	</xsl:template>	<!-- Adds base.css style  -->	<xsl:template match="html:head">       	<xsl:copy>			<xsl:apply-templates/>			<xsl:element name="link">				<xsl:attribute name="rel">			    	<xsl:value-of select="'stylesheet'"/>			  	</xsl:attribute>				<xsl:attribute name="href">			    	<xsl:value-of select="'css/base.css'"/>			  	</xsl:attribute>				<xsl:attribute name="type">			    	<xsl:value-of select="'text/css'"/>			  	</xsl:attribute>			</xsl:element>		</xsl:copy>	</xsl:template>   <!-- Changing div class='header' to <header> -->   <xsl:template match="html:div[@class='header']" priority="1">       <xsl:element name="header">	    	<xsl:apply-templates select="@*|node()"/>	  </xsl:element>   </xsl:template>   <!-- Changing div class='nav' to <nav> -->   <xsl:template match="html:div[@class='nav']" priority="1">       <xsl:element name="nav">           <xsl:apply-templates select="* | text()"/>       </xsl:element>   </xsl:template>   <!-- Changing div class='article' to <article> -->   <xsl:template match="html:div[@class='article']" priority="1">       <xsl:element name="article">           <xsl:apply-templates select="* | text()"/>       </xsl:element>   </xsl:template>   <!-- Changing div class='section' to <section> -->   <xsl:template match="html:div[@class='section']" priority="1">       <xsl:element name="section">           <xsl:apply-templates select="* | text()"/>       </xsl:element>   </xsl:template>   <!-- Changing div class='aside' to <aside> -->   <xsl:template match="html:div[@class='aside']" priority="1">       <xsl:element name="aside">           <xsl:apply-templates select="* | text()"/>       </xsl:element>   </xsl:template>   <!-- Changing div class='footer' to <footer> -->   <xsl:template match="html:div[@class='footer']" priority="1">       <xsl:element name="footer">           <xsl:apply-templates select="* | text()"/>       </xsl:element>   </xsl:template>	<!-- DL/DT/DD fixes -->  	<xsl:template match="html:dl">      <xsl:element name="ul">        <xsl:apply-templates select="* | text()"/>       </xsl:element>  	</xsl:template>    	<xsl:template match="html:dt">      <xsl:element name="li">        <xsl:apply-templates select="* | text()"/>              </xsl:element>  	</xsl:template>    	<xsl:template match="html:dd">      <xsl:element name="ul">        <xsl:apply-templates select="* | text()"/>       </xsl:element>  	</xsl:template>	<!-- Replace obsolete align/valign attribute with class="align" -->	<xsl:template match="@align[contains(.,'left')]">	  <xsl:attribute name="class">	    <xsl:value-of select="'align_left'"/>	  </xsl:attribute>	</xsl:template>	<xsl:template match="@align[contains(.,'center')]">	  <xsl:attribute name="class">	    <xsl:value-of select="'align_center'"/>	  </xsl:attribute>	</xsl:template>	<xsl:template match="@align[contains(.,'right')]">	  <xsl:attribute name="class">	    <xsl:value-of select="'align_right'"/>	  </xsl:attribute>	</xsl:template>	<xsl:template match="@valign">	  <xsl:attribute name="class">	    <xsl:value-of select="'vertical_align'"/>	  </xsl:attribute>	</xsl:template>	<!-- Removes empty <a> elements -->	<xsl:template match="html:a[. = '']">	</xsl:template>  <!-- Removes empty <p> elements -->	<xsl:template match="html:p[. = '']">	</xsl:template>			<!-- Removes empty <div> elements -->	<xsl:template match="html:div[. = '']">	</xsl:template>			  <!-- Removes attribute type in <ul> elements -->		<xsl:template match="html:ul[@type]/@type">	</xsl:template>	  <!-- Removes attribute type in <hr> elements -->		<xsl:template match="html:hr[@type]/@type">	</xsl:template>	  <!-- Removes attribute type in <dl> elements -->		<xsl:template match="html:dl[@type]/@type">	</xsl:template>		  <!-- Removes attribute shape in <a> elements -->		<xsl:template match="html:a[@shape]/@shape">	</xsl:template>	  <!-- Removes attribute clear in <br> elements -->		<xsl:template match="html:br[@clear]/@clear">	</xsl:template>    	>>>>>>> .r118
-</xsl:stylesheet>
