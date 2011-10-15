@@ -42,13 +42,13 @@ window.addEvent('domready', function() {
 	    initialize: function(){
 	        this.slides = $$('div.titlepage, div.foil, div.foilgroup');
 			this.slidesTitle = $$('h1.title')[0].get('text');
-			this.initialBodyRestructuring();
+			this.initHTMLBodyForSlides();
 			this.hideAllSlides();
 			this.show(this.currentSlide);
 	    },
  
 
-	    initialBodyRestructuring: function(){
+	    initHTMLBodyForSlides: function(){
         	document.body.addClass('slidesBody');
 
 			// Load CSS assets
@@ -69,16 +69,18 @@ window.addEvent('domready', function() {
 			$$('div.logotypes').dispose();
 			
 			
-			// If slides were loaded before, find out what page should it restore to
+			// If the slides were once loaded before, find out what page should it restore to
 			var anchorInt = $get("#");
 			if (anchorInt != "" && anchorInt > 0 && anchorInt <= this.slides.length) {
 				this.currentSlide = anchorInt-1;
 			} else {
-				this.currentSlide = ($.jStorage.get(this.slidesTitle, String.from(0))).toInt();
+				// TODO
+				//this.currentSlide = ($.jStorage.get(this.slidesTitle, String.from(0))).toInt();
+				this.currentSlide = 0;
 			}
 			
 			
-			// Fix CSS heights to accommodate current window size
+			// Fix CSS heights to accommodate for current window size
 			this.handleResizedWindow();
 			var timer;
 			var temp = this;
@@ -116,13 +118,14 @@ window.addEvent('domready', function() {
 				//window.removeEvent('keydown:keys(right)', this.moveToNextSlide);
 			}
 			
-			// Set page number value under the 'next slide' button
+			// Set the page number value under the 'next slide' button
 			$('pageNumber').set('html', (this.currentSlide+1) + '/' + this.slides.length)
 			
-			// Save current slide to local storage
-			$.jStorage.set(this.slidesTitle, String.from(this.currentSlide));
+			// Save the current slide to local storage
+			// TODO
+			// $.jStorage.set(this.slidesTitle, String.from(this.currentSlide));
 			
-			// Change anchor in URL
+			// Change the anchor in URL
 			var url = window.location.toString();
 			url = url.split("#")[0];
 			window.location = url + "#" + (this.currentSlide+1);
@@ -228,7 +231,7 @@ window.addEvent('domready', function() {
 	});
 
 
-	if ($$('.foil').length > 0) {
+	if ($$('.foil').length > 0) { // Determine if the document is of DB Slides format
 		new DocbookPresentation();
 	}
 
