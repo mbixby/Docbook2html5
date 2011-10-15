@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search
+END
+ja-jp.props
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search/ja-jp.props
+END
+default.props
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search/default.props
+END
+en-us.props
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search/en-us.props
+END
+punctuation.props
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search/punctuation.props
+END
+nwSearchFnt.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search/nwSearchFnt.js
+END
+es-es.props
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/template/content/search/es-es.props
+END

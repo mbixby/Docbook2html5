@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website
+END
+olink.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/olink.xsl
+END
+toc-tabular.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/toc-tabular.xsl
+END
+makefile-dep.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/makefile-dep.xsl
+END
+toc.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/toc.xsl
+END
+website-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/website-common.xsl
+END
+tabular.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/tabular.xsl
+END
+xbel.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/xbel.xsl
+END
+param.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/param.xml
+END
+chunk-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/chunk-common.xsl
+END
+param.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/param.xsl
+END
+chunk-tabular.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/chunk-tabular.xsl
+END
+head.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/head.xsl
+END
+website.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/website.xsl
+END
+autolayout.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/autolayout.xsl
+END
+rss.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/rss.xsl
+END
+chunk-website.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/chunk-website.xsl
+END
+website-targets.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/website/website-targets.xsl
+END

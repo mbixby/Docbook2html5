@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip
+END
+normalise-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/normalise-common.xsl
+END
+blocks2dbk.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/blocks2dbk.xsl
+END
+normalise2sections.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/normalise2sections.xsl
+END
+blocks2dbk.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/blocks2dbk.dtd
+END
+dbk2wp.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/dbk2wp.xsl
+END
+param.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/param.xml
+END
+template.dot
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/template.dot
+END
+pages2normalise.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/pages2normalise.xsl
+END
+specifications.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/specifications.xml
+END
+blocks-spec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/blocks-spec.xml
+END
+dbk2ooo.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/dbk2ooo.xsl
+END
+wordml2normalise.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/wordml2normalise.xsl
+END
+param.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/param.xsl
+END
+template-pages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/template-pages.xml
+END
+dbk2pages.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/dbk2pages.xsl
+END
+template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/template.xml
+END
+sections2blocks.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/sections2blocks.xsl
+END
+dbk2wordml.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/dbk2wordml.xsl
+END
+sections-spec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/roundtrip/sections-spec.xml
+END

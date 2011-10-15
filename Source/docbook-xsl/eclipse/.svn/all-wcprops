@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/eclipse
+END
+profile-eclipse.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/eclipse/profile-eclipse.xsl
+END
+eclipse.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/eclipse/eclipse.xsl
+END
+eclipse3.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/eclipse/eclipse3.xsl
+END

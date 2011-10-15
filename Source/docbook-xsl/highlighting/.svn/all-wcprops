@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting
+END
+ini-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/ini-hl.xml
+END
+csharp-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/csharp-hl.xml
+END
+xslthl-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/xslthl-config.xml
+END
+python-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/python-hl.xml
+END
+ruby-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/ruby-hl.xml
+END
+java-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/java-hl.xml
+END
+cpp-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/cpp-hl.xml
+END
+c-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/c-hl.xml
+END
+tcl-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/tcl-hl.xml
+END
+php-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/php-hl.xml
+END
+common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/common.xsl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/README
+END
+perl-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/perl-hl.xml
+END
+delphi-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/delphi-hl.xml
+END
+javascript-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/javascript-hl.xml
+END
+myxml-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/myxml-hl.xml
+END
+m2-hl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/highlighting/m2-hl.xml
+END

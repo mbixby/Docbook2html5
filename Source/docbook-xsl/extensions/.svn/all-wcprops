@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions
+END
+NOTICE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/NOTICE.txt
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/LICENSE.txt
+END
+webhelpindexer.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/webhelpindexer.jar
+END
+xslt.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/xslt.py
+END
+docbook.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/docbook.py
+END
+xalan27.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/xalan27.jar
+END
+lucene-analyzers-3.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/lucene-analyzers-3.0.0.jar
+END
+lucene-core-3.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/lucene-core-3.0.0.jar
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/README.txt
+END
+README.LIBXSLT
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/README.LIBXSLT
+END
+saxon65.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/extensions/saxon65.jar
+END

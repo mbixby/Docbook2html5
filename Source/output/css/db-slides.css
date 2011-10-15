@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*  Written by Bixby.cz
+	CSS classes usually follow the DOM structure. Feel free to peek in.
+
+	
+	DB-SLIDES.css (global styles)
+	
+	• General
+
+*/
+
+
+
+/* General 
+-----------------------------------------------------------------------------------------------*/
+
+html { height:100%; }
+
+.slidesBody {
+	background: #555 url('../images/slidesBg.png') repeat;
+	padding:0;
+	height:100%;
+	}
+	
+	div.titlepage {
+		text-align: center;
+	}
+	
+	div.titlepage, div.foil, div.foilgroup {
+		position: relative;
+		margin: 10px 10px 10px;
+		padding: 30px;
+		background: #fff;
+		
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-moz-box-shadow: 0 1px 4px #222;
+		-webkit-box-shadow: 0 1px 4px #222;
+		box-shadow: 0 1px 4px #222;
+		
+		min-height: 85%;
+		}
+		h1.title {
+			text-align:center;
+		}
+	
+	div.leftNav, div.rightNav {
+		position:absolute;
+		color: #000;
+		top: 10px;
+		}
+	div.leftNav {
+		left: 11px;
+		}
+		div.leftNav a#previousButton {
+			margin-bottom: 6px;
+			background: url(../images/leftButton.png);
+			width: 35px;	height: 35px;
+			}
+		div.leftNav a#togglePanelButton {
+			background: url(../images/togglePanelButton.png);
+			width: 35px;	height: 35px;
+			}
+	div.rightNav {
+		right: 11px;
+		}
+		div.rightNav a#nextButton {
+			margin-bottom: 5px;
+			background: url(../images/rightButton.png);
+			width: 35px;	height: 35px;
+			}
+		div.rightNav div#pageNumber {
+			text-align: center;
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 0.7em;
+			color: #666;
+			text-shadow: 0 1px 0 #ddd;
+			width: 35px;	height: 35px;
+			}
+
+
+
+
+
+
+/* PRINT 
+-----------------------------------------------------------------------------------------------*/
+@media print {
+}
+
+
+
+
+
+
+
+
+
+
+

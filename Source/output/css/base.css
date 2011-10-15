@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*  Written by Bixby.cz
+	CSS classes usually follow the DOM structure. Feel free to peek in.
+
+	
+	BASE.css (global styles)
+	
+	• General
+	• Print
+
+*/
+
+
+
+/* General 
+-----------------------------------------------------------------------------------------------*/
+@import url("reset.css"); /* Boilerplate https://github.com/thatcoolguy/gridless-boilerplate */
+
+html { height:100%; }
+body {
+	padding-top:2em;
+	}
+	
+.f { float:left; }
+.center { width:100%; text-align: center; }
+
+/*button*/
+a.btn:link, a.btn:active, a.btn:visited, a.btn:hover { 
+	display:block; 
+	background-position: left top !important; 
+	text-indent: -4000px;
+	overflow: hidden;
+	}
+	a.btn:hover { 
+		background-position: left bottom !important; 
+		}
+	a.btn:active {
+		position: relative;
+		top: 1px;
+		}
+
+
+
+
+
+/* Footer 
+-----------------------------------------------------------------------------------------------*/
+
+#footer {
+	}
+	
+	
+
+
+/* PRINT 
+-----------------------------------------------------------------------------------------------*/
+@media print {
+}
+
+
+
+
+
+
+
+
+
+
+

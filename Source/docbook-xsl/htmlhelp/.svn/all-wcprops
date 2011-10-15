@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/htmlhelp
+END
+profile-htmlhelp.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/htmlhelp/profile-htmlhelp.xsl
+END
+htmlhelp.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/htmlhelp/htmlhelp.xsl
+END
+profile-htmlhelp-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/htmlhelp/profile-htmlhelp-common.xsl
+END
+htmlhelp-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/htmlhelp/htmlhelp-common.xsl
+END

@@ -1,0 +1,381 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Technické řešení univerzální služby připojení k Internetu</title>
+      <meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/>
+      <meta name="description"
+            content="Komunikační infrastruktura je jednou z osmi prioritních oblastí Státní informační politiky ČR, neboť jde o podstatný předpoklad rozvoje informační společnosti. Dynamický rozvoj komunikačních sítí a služeb byl u nás odstartován liberalizací telekomunikací v roce 2001. Zvláště ve venkovských a odlehlých oblastech však není rozvoj dostatečný a hrozí riziko rozdělení společnosti (digital divide). Jedním z možných řešení problému je koncepce tzv. univerzální služby připojení k Internetu, která staví přístup k Internetu na úroveň hlasových služeb. U hlasových služeb je již univerzální služba zavedena a určuje právo občana na univerzální službu dané kvality za danou maximální cenu. Na univerzální službu připojení k Internetu se dá nahlížet jako na zobecnění stávající univerzální služby, neboť díky technologiím VoIP zahrnuje i služby hlasové. Moderní univerzální služba musí mít vzhledem k finanční podpoře z veřejných zdrojů vhodný poměr mezi užitnou hodnotou a cenou. Přesnou specifikaci univerzální služby lze potom považovat za etalon, určující doporučené parametry minimálního internetového připojení pro domácnosti. V úvodu tato práce uvádí a obhajuje jednu z možných definic, obsahující mimo jiné požadavek na podporu multimediálních konferencí, garantovanou kvalitu služeb a bezpečnost. K vlastnostem univerzální služby by měla patřit i nezávislost na konkrétní technologii a následná realizovatelnost širším spektrem alternativních telekomunikačních operátorů. Na základě daných požadavků tedy práce sumarizuje a porovnává stávající technologie. Diskutovány jsou varianty založené na pevných metalických a optických linkách, mobilních bezdrátových technologiích a pevných bezdrátových sítích. V dalším výkladu se již práce zabývá detailním návrhem pevné bezdrátové přístupové a páteřní sítě technologiemi WiFi a WiMAX. Návrh obsahuje podporu kvality služeb a silné bezpečnosti. Řešení je dále doplněno nástroji pro správu a dohled sítě, účtování uživatelů, dokumentaci sítě a zmiňuje i základní pracovní postupy. V práci je kladen důraz na respektování aktuálních telekomunikačních standardů a na otevřené technologie."/>
+      <meta name="keywords"
+            content="internet, připojení, univerzální služba, venkov, přístupové sítě, páteřní sítě, bezdrátové sítě, technické řešení, bezpečnost, rozšiřitelnost, kvalita služeb, QoS, embedded, Linux"/>
+   </head>
+   <body>
+      <div xml:lang="cs" class="book"
+           title="Technické řešení univerzální služby připojení k Internetu">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h1 class="title">
+                     <a id="d54e1" shape="rect"/>Technické řešení univerzální služby připojení k Internetu</h1>
+               </div>
+               <div>
+                  <h2 class="subtitle">Diplomová práce</h2>
+               </div>
+               <div>
+                  <div class="author">
+                     <h3 class="author">
+                        <span class="firstname">David</span> 
+                        <span class="surname">Kutálek</span>
+                     </h3>
+                  </div>
+               </div>
+               <div>
+                  <p class="pubdate">2006</p>
+               </div>
+               <div>
+                  <div class="abstract" title="Abstrakt">
+                     <p class="title">
+                        <strong>Abstrakt</strong>
+                     </p>
+                     <p>
+			Komunikační infrastruktura je jednou z osmi prioritních oblastí Státní informační politiky ČR,
+			neboť jde o podstatný předpoklad rozvoje informační společnosti. Dynamický rozvoj komunikačních
+			sítí a služeb byl u nás odstartován liberalizací telekomunikací v roce 2001. Zvláště ve venkovských
+			a odlehlých oblastech však není rozvoj dostatečný a hrozí riziko rozdělení společnosti (digital divide).
+			</p>
+                     <p>
+			Jedním z možných řešení problému je koncepce tzv. univerzální služby připojení k Internetu,
+			která staví přístup k Internetu na úroveň hlasových služeb. U hlasových služeb je již univerzální
+			služba zavedena a určuje právo občana na univerzální službu dané kvality za danou maximální cenu.
+			Na univerzální službu připojení k Internetu se dá nahlížet jako na zobecnění stávající
+			univerzální služby, neboť díky technologiím VoIP zahrnuje i služby hlasové.
+			</p>
+                     <p>
+			Moderní univerzální služba musí mít vzhledem k finanční podpoře z veřejných zdrojů vhodný
+			poměr mezi užitnou hodnotou a cenou. Přesnou specifikaci univerzální služby lze potom považovat
+			za etalon, určující doporučené parametry minimálního internetového připojení pro domácnosti.
+			V úvodu tato práce uvádí a obhajuje jednu z možných definic, obsahující mimo jiné požadavek
+			na podporu multimediálních konferencí, garantovanou kvalitu služeb a bezpečnost.
+			</p>
+                     <p>
+			K vlastnostem univerzální služby by měla patřit i nezávislost na konkrétní technologii
+			a následná realizovatelnost širším spektrem alternativních telekomunikačních operátorů.
+			Na základě daných požadavků tedy práce sumarizuje a porovnává stávající 
+			technologie. Diskutovány jsou varianty založené na pevných metalických 
+			a optických linkách, mobilních bezdrátových technologiích a pevných bezdrátových 
+			sítích.
+			</p>
+                     <p>
+			V dalším výkladu se již práce zabývá detailním návrhem pevné bezdrátové přístupové 
+			a páteřní sítě technologiemi WiFi a WiMAX. Návrh obsahuje podporu kvality služeb a silné
+			bezpečnosti. Řešení je dále doplněno nástroji pro správu a dohled sítě, účtování uživatelů, 
+			dokumentaci sítě a zmiňuje i základní pracovní postupy. V práci je kladen důraz na 
+			respektování aktuálních telekomunikačních standardů a na otevřené technologie.
+			</p>
+                  </div>
+               </div>
+            </div>
+            <div/>
+            <hr/>
+         </div>
+         <div class="toc">
+            <p>
+               <strong>Obsah</strong>
+            </p>
+            <ul>
+               <li>
+                  <span class="index">
+                     <a href="#d54e75" shape="rect">Rejstřík</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="appendix">
+                     <a href="#appendix-cd" shape="rect">A. Obsah přiloženého CD</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="appendix">
+                     <a href="#appendix-software" shape="rect">B. Přehled programového vybavení systémové platformy</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="appendix">
+                     <a href="#appendix-software-config" shape="rect">C. Přehled důležitých konfiguračních souborů</a>
+                  </span>
+               </li>
+               <ul>
+                  <ul>
+                     <li>
+                        <span class="sect1">
+                           <a href="#d54e99" shape="rect">Základní konfigurace systému</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="sect1">
+                           <a href="#d54e104" shape="rect">Nastavení sítě</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="sect1">
+                           <a href="#d54e109" shape="rect">Konzole přes sériový port</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="sect1">
+                           <a href="#d54e114" shape="rect">Nastavení rozšiřujících balíčků</a>
+                        </span>
+                     </li>
+                  </ul>
+               </ul>
+               <li>
+                  <span class="appendix">
+                     <a href="#appendix-kernel" shape="rect">D. Konfigurace linuxového jádra</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="appendix">
+                     <a href="#appendix-dbnet" shape="rect">E. Základní datový model pro management sítě</a>
+                  </span>
+               </li>
+            </ul>
+         </div>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+         <div class="index" title="Rejstřík">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title">
+                        <a id="d54e75" shape="rect"/>Rejstřík</h2>
+                  </div>
+               </div>
+               <div/>
+            </div>
+            <div class="index"/>
+         </div>
+         <div class="appendix" title="Příloha A. Obsah přiloženého CD">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title">
+                        <a id="appendix-cd" shape="rect"/>Příloha A. Obsah přiloženého CD</h2>
+                  </div>
+               </div>
+               <div/>
+            </div>
+            <pre class="programlisting" xml:space="preserve">
+		<span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+	</pre>
+         </div>
+         <div class="appendix"
+              title="Příloha B. Přehled programového vybavení systémové platformy">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title">
+                        <a id="appendix-software" shape="rect"/>Příloha B. Přehled programového vybavení systémové platformy</h2>
+                  </div>
+               </div>
+               <div/>
+            </div>
+            <p title="Kompletní seznam balíčků:">
+               <strong>Kompletní seznam balíčků: </strong>
+               <span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+            </p>
+         </div>
+         <div class="appendix" title="Příloha C. Přehled důležitých konfiguračních souborů">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title">
+                        <a id="appendix-software-config" shape="rect"/>Příloha C. Přehled důležitých konfiguračních souborů</h2>
+                  </div>
+               </div>
+               <div/>
+            </div>
+            <div class="toc">
+               <p>
+                  <strong>Obsah</strong>
+               </p>
+               <ul>
+                  <li>
+                     <span class="sect1">
+                        <a href="#d54e99" shape="rect">Základní konfigurace systému</a>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="sect1">
+                        <a href="#d54e104" shape="rect">Nastavení sítě</a>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="sect1">
+                        <a href="#d54e109" shape="rect">Konzole přes sériový port</a>
+                     </span>
+                  </li>
+                  <li>
+                     <span class="sect1">
+                        <a href="#d54e114" shape="rect">Nastavení rozšiřujících balíčků</a>
+                     </span>
+                  </li>
+               </ul>
+            </div>
+            <p>	Uvádím především soubory, jenž je nutné či vhodné upravit pro každý další stroj.
+		Více podrobností o uvedených konfiguracích a dalších možnostech konfigurace systému 
+		Linux najde čtenář v příslušných manuálových stránkách, případně v 
+		[<span class="citation">LDP03</span>].
+		</p>
+            <div class="sect1" title="Základní konfigurace systému">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both">
+                           <a id="d54e99" shape="rect"/>Základní konfigurace systému</h2>
+                     </div>
+                  </div>
+                  <div/>
+               </div>
+               <pre class="programlisting" xml:space="preserve">
+/etc/apt/apt.conf
+   Nastavení apt-pinning, pokud si vedeme vlastní repozitář.
+
+/etc/apt/sources.list
+   Seznam zdrojů balíčků, tj. originálního zdroje a vlastního repozitáře.
+
+/etc/default/ntp-servers
+   Seznam časových serverů pro synchronizaci času. Síťová synchronizace
+   je nutností, neboť např. desky WRAP nemají baterii pro úschovu 
+   aktuálního data.
+
+/etc/fstab
+   Definice diskových oddílů a příslušných souborových systémů.
+   Liší se pouze podle volby mezi JFFS2 a Ext2 pro kořenový svazek.
+   
+/etc/hostname
+   Definuje jméno stroje, které by mělo být v rámci sítě unikátní
+   
+/etc/modules
+   Seznam jaderných modulů k zavedení při startu. 
+   Nutno uvést zejména ovladače síťových karet a bezdrátových modulů.
+   
+/etc/ssmtp/ssmtp.conf
+   Konfigurace jednoduchého balíčku pro odesílání pošty.
+   
+/etc/syslog.conf
+   Vzhledem k povaze CF karet je vhodné logovat na centrální server.
+</pre>
+            </div>
+            <div class="sect1" title="Nastavení sítě">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both">
+                           <a id="d54e104" shape="rect"/>Nastavení sítě</h2>
+                     </div>
+                  </div>
+                  <div/>
+               </div>
+               <pre class="programlisting" xml:space="preserve">
+/etc/inetd.conf
+   V konfiguraci internetového superserveru doporučuji vše nepotřebné,
+   tudíž prakticky vše vypnout, a to především z bezpečnostních důvodů. 
+
+/etc/network/interfaces
+   Hlavní konfigurační soubor pro nastavování rozhraní směrovače,
+   včetně jejich bezdrátových parametrů a spouštění akcí
+   souvisejících se změnou stavu rozhraní. Tzn. odtud spouštíme
+   např. skripty a příkazy pro nastavování kvality služeb 
+   či obsluhu paketového filtru. Pokud nepoužíváme dynamické směrování,
+   zapisujeme zde i všechna směrovací pravidla.
+   
+/etc/network/options
+   Několik základních nastavení sítě, zejména aktivace přeposílání paketů
+   a vypnutí rp filtru, pokud máme v síti okruhy.
+   
+/etc/quagga/*
+   Nastavení démona pro dynamické směrování.
+   
+/etc/resolv.conf
+   Nastavení primárního a sekundárního dns serveru.
+   
+/etc/snmp/*
+   Chceme-li monitorovat stroje protokolem snmp, provedeme konfiguraci zde.
+		</pre>
+            </div>
+            <div class="sect1" title="Konzole přes sériový port">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both">
+                           <a id="d54e109" shape="rect"/>Konzole přes sériový port</h2>
+                     </div>
+                  </div>
+                  <div/>
+               </div>
+               <pre class="programlisting" xml:space="preserve">
+/etc/inittab
+   V konfiguraci procesu init přiřadíme sériové konzoli terminál:
+   T0:23:respawn:/sbin/getty -L ttyS0 38400 vt102
+   
+/boot/grub/menu.lst
+   Zde předáme jádru mimojiné i parametr pro použití sériové konzole:
+   console=ttyS0,38400
+   
+/etc/securetty
+   Povolíme přístup na sériovou konzoli superuživateli root.
+		</pre>
+            </div>
+            <div class="sect1" title="Nastavení rozšiřujících balíčků">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both">
+                           <a id="d54e114" shape="rect"/>Nastavení rozšiřujících balíčků</h2>
+                     </div>
+                  </div>
+                  <div/>
+               </div>
+               <pre class="programlisting" xml:space="preserve">
+/etc/thttpd/thttpd.conf 
+   Pár voleb pro minimalistický web server.
+   
+/etc/kismet/kismet_drone.conf
+   Konfigurace agenta pro monitoring éteru.
+		</pre>
+            </div>
+         </div>
+         <div class="appendix" title="Příloha D. Konfigurace linuxového jádra">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title">
+                        <a id="appendix-kernel" shape="rect"/>Příloha D. Konfigurace linuxového jádra</h2>
+                  </div>
+               </div>
+               <div/>
+            </div>
+            <pre class="programlisting" xml:space="preserve">
+		<span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+	</pre>
+         </div>
+         <div class="appendix" title="Příloha E. Základní datový model pro management sítě">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title">
+                        <a id="appendix-dbnet" shape="rect"/>Příloha E. Základní datový model pro management sítě</h2>
+                  </div>
+               </div>
+               <div/>
+            </div>
+            <pre class="programlisting" xml:space="preserve">
+		<span style="color: red">&lt;xi:include&gt;&lt;/xi:include&gt;</span>
+	</pre>
+         </div>
+      </div>
+   </body>
+</html>

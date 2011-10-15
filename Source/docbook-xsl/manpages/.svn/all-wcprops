@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages
+END
+html-synop.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/html-synop.xsl
+END
+charmap.groff.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/charmap.groff.xsl
+END
+inline.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/inline.xsl
+END
+profile-docbook.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/profile-docbook.xsl
+END
+endnotes.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/endnotes.xsl
+END
+docbook.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/docbook.xsl
+END
+other.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/other.xsl
+END
+ChangeLog.20020917
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/ChangeLog.20020917
+END
+table.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/table.xsl
+END
+block.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/block.xsl
+END
+param.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/param.xml
+END
+info.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/info.xsl
+END
+lists.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/lists.xsl
+END
+refentry.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/refentry.xsl
+END
+param.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/param.xsl
+END
+pi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/pi.xml
+END
+utility.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/utility.xsl
+END
+pi.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/pi.xsl
+END
+synop.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/manpages/synop.xsl
+END

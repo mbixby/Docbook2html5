@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/LICENSE
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/build.properties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/webhelp/build.xml
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html
+END
+param.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/param.xml
+END
+tables.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/tables.xsl
+END
+w3c.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/w3c.xsl
+END
+frames.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/frames.xsl
+END
+jscript.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/jscript.xsl
+END
+graphics.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/graphics.xsl
+END
+param.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/param.xsl
+END
+plain.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/plain.xsl
+END
+default.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/default.xsl
+END
+flat.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/flat.xsl
+END
+css.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/css.xsl
+END
+slides-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/slides-common.xsl
+END
+vslides.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/83/trunk/docbook2html-xsl/docbook-xsl/slides/html/vslides.xsl
+END
