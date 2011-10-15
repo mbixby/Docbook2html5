@@ -8,10 +8,11 @@
 
 ##Team##
 This was a course project developed by these awesome people:
-* Jakub Hamerník
-* Michal Obročník
-* Lubomír Šálek
-* Petr Zvoníček
+
+* Jakub Hamerník ()
+* Michal Obročník (mbixby)
+* Lubomír Šálek ()
+* Petr Zvoníček ()
 
 #For developers#
 
