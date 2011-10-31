@@ -21,7 +21,7 @@ html { height:100%; }
 .slidesBody {
 	background: #555 url('../images/slidesBg.png') repeat;
 	padding:0;
-	height:100%;
+	width:100% !important;  height:100%;
 	}
 	
 	div.titlepage {
@@ -46,44 +46,76 @@ html { height:100%; }
 			text-align:center;
 		}
 	
-	div.leftNav, div.rightNav {
-		position:absolute;
-		color: #000;
-		top: 10px;
+
+#mainContainer {
+    margin: 0 48px;
+    }
+
+div.leftNav, div.rightNav {
+	position: absolute;
+	color: #000;
+	top: 10px;
+	}
+div.leftNav {
+	left: 11px;
+	}
+	div.leftNav a#previousButton {
+		margin-bottom: 6px;
+		background: url(../images/leftButton.png);
+		width: 35px;	height: 35px;
 		}
-	div.leftNav {
-		left: 11px;
+	div.leftNav a#togglePanelButton {
+		background: url(../images/togglePanelButton.png);
+		width: 35px;	height: 35px;
 		}
-		div.leftNav a#previousButton {
-			margin-bottom: 6px;
-			background: url(../images/leftButton.png);
-			width: 35px;	height: 35px;
-			}
-		div.leftNav a#togglePanelButton {
-			background: url(../images/togglePanelButton.png);
-			width: 35px;	height: 35px;
-			}
-	div.rightNav {
-		right: 11px;
+div.rightNav {
+	right: 11px;
+	}
+	div.rightNav a#nextButton {
+		margin-bottom: 5px;
+		background: url(../images/rightButton.png);
+		width: 35px;	height: 35px;
 		}
-		div.rightNav a#nextButton {
-			margin-bottom: 5px;
-			background: url(../images/rightButton.png);
-			width: 35px;	height: 35px;
-			}
-		div.rightNav div#pageNumber {
-			text-align: center;
-			font-family: Helvetica, Arial, sans-serif;
-			font-size: 0.7em;
-			color: #666;
-			text-shadow: 0 1px 0 #ddd;
-			width: 35px;	height: 35px;
-			}
+	div.rightNav div#pageNumber {
+		text-align: center;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 0.7em;
+		color: #666;
+		text-shadow: 0 1px 0 #ddd;
+		width: 35px;	height: 35px;
+		}
 
 
-
-
-
+/*
+#mainContainer {
+    margin-left: 230px;
+    }
+div.leftNav {
+	left: 190px;
+	}
+*/	
+.navBar {
+	display: none;
+	position: absolute;
+	top: 0; left:0;
+	z-index: 2;
+	width: 180px; height:100%; 
+	
+	background: rgba(0,0,0,0.4);
+    box-shadow:inset -2px 0 4px rgba(0,0,0,0.2);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    }
+    .navBar ul {
+        list-style-type: none;
+        padding: 1em 1em;
+        }
+        .navBar li {
+            padding: 5px 0px;
+            }
+            .navBar a:link, .navBar a:visited, .navBar a:hover, .navBar a:active {
+                color: #fff;
+                }
 
 /* PRINT 
 -----------------------------------------------------------------------------------------------*/

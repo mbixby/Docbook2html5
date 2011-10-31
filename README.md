@@ -17,8 +17,13 @@ This was a course project developed by these awesome people:
 #For developers#
 
 ##Todo##
+* encapsulate all slides in div; make it work for global l/r padding
+* floating navBar div
+* links with animations (stacking)
+
 * consolidate output assets for docbook slides (images, css, js) into single companion file 
 * bug: when transforming files with the Java tool, it sends some http (:80) requests
+* slide-to-slide links 
 
 ##Useful Links##
 * [http://wiki.docbook.org/DocBookXslStylesheets Main DocBook XSL page on Wiki]
