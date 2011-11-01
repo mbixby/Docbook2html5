@@ -86,36 +86,46 @@ div.rightNav {
 		}
 
 
-/*
-#mainContainer {
-    margin-left: 230px;
+/* NavBar -----------------------------------------------------------------------------------------------*/
+#mainContainer.navBarVisible {
+    margin-left: 240px;
     }
-div.leftNav {
-	left: 190px;
+    
+div.navBarVisible {
+	left: 200px;
 	}
-*/	
-.navBar {
-	display: none;
+	
+#navBar {
+	display: block;
 	position: absolute;
 	top: 0; left:0;
 	z-index: 2;
-	width: 180px; height:100%; 
+	width: 0px; height:100%; 
+	overflow-x: hidden;
+	overflow-y: scroll;
 	
 	background: rgba(0,0,0,0.4);
     box-shadow:inset -2px 0 4px rgba(0,0,0,0.2);
     font-family: Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     }
-    .navBar ul {
+    
+    #navBar.navBarVisible {
+        width: 190px;
+        }
+    #navBar ul {
         list-style-type: none;
         padding: 1em 1em;
         }
-        .navBar li {
+        #navBar li {
             padding: 5px 0px;
             }
-            .navBar a:link, .navBar a:visited, .navBar a:hover, .navBar a:active {
+            #navBar a:link, #navBar a:visited, #navBar a:hover, #navBar a:active {
                 color: #fff;
                 }
+
+
+
 
 /* PRINT 
 -----------------------------------------------------------------------------------------------*/

@@ -37,13 +37,14 @@ window.addEvent('domready', function() {
     
     var DocbookPresentation = new Class({
  
-        Binds: ['hideAllSlides', 'slides', 'moveToPreviousSlide', 'moveToNextSlide', 'currentSlide', 'slideWidth', 'handleResizedWindow', 'slidesTitle'],
+        Binds: ['hideAllSlides', 'slides', 'moveToPreviousSlide', 'moveToNextSlide', 'currentSlide', 'slideWidth', 'handleResizedWindow', 'slidesTitle', 'toggleNavBar'],
     
         initialize: function(){
             this.slides = $$('div.titlepage, div.foil, div.foilgroup');
             this.slidesTitle = $$('h1.title')[0].get('text');
             this.initHTMLBodyForSlides();
             this.replaceOriginalSlideToSlideLinks();
+            
             this.hideAllSlides();
             this.show(this.currentSlide);
         },
@@ -56,44 +57,34 @@ window.addEvent('domready', function() {
             
             Asset.css('css/db-slides.css');
             
+            // Wrap html in div container
+            
             var container = new Element('div#mainContainer');
+            this.mainContainer = container
             container.adopt(document.body.getChildren());
             container.inject(document.body);
             
-            // Create and init navigation elements
+            // Create and init prev/next buttons and navBar
             
-            var navigation = Elements.from('<div class="leftNav"><a id="previousButton" class="btn" href="#">Previous Slide</a><a id="togglePanelButton" class="btn" href="#">Toggle Panel</a></div>\n<div class="rightNav"><a id="nextButton" class="btn" href="#">Next Slide</a><div id="pageNumber">0/0</div></div>');
-            navigation.inject(container);
-            
-            $('previousButton').addEvent('click', this.moveToPreviousSlide);
-            $('nextButton').addEvent('click', this.moveToNextSlide);
-            
-            window.addEvent('keydown:keys(left)', this.moveToPreviousSlide);
-            window.addEvent('keydown:keys(right)', this.moveToNextSlide);
-            
-            // Create and init navBar elements
-            
-            var navBar = Elements.from('<div class="navBar"><ul><li><a href="#">Test</a></li><li><a href="#">Test</a></li><ul></div>');
-            navBar.inject(document.body);
-            
+            this.initNavigationButtons();
+            this.initNavBar();
             
             // Move logotypes to separate slide
-            
-            $$('div.logotypes').dispose();
             // TODO
             
+            $$('div.logotypes').dispose();
+            
             // If the slides were once loaded before, find out what page should it restore to
+            // TODO
             
             var anchorInt = $get("#");
             if (anchorInt != "" && anchorInt > 0 && anchorInt <= this.slides.length) {
                 this.currentSlide = anchorInt-1;
             } else {
-                // TODO
                 //this.currentSlide = ($.jStorage.get(this.slidesTitle, String.from(0))).toInt();
                 this.currentSlide = 0;
             }
 
-            
             // Fix CSS heights to accommodate for current window size
             
             this.handleResizedWindow();
@@ -107,8 +98,45 @@ window.addEvent('domready', function() {
             });
         },
     
+        initNavBar: function(){
+            var thisObj = this;
+            var navBarList = new Element('ul').inject(document.body)
+            this.navBar = new Element('div#navBar').wraps(navBarList)
+            
+            this.slides.each(function(slide, index){
+                var link =  new Element('a').inject(navBarList)
+                new Element('li').wraps(link)
+                
+                link.set('text', slide.getElement('h1.title').get('text') )
+                link.set('href', '#' + index)
+                link.addEvent('click', function(e){
+                    e.stop()
+                    thisObj.hideAllSlides();
+                    thisObj.show(index);
+                });
+            })
+        },
+        
+        toggleNavBar: function(){
+            [this.navBar, this.mainContainer, $$('div.leftNav')[0]].each(function(el){
+                el.toggleClass('navBarVisible')
+            })
+        },
+        
+        initNavigationButtons: function(){
+            var navigation = Elements.from('<div class="leftNav"><a id="previousButton" class="btn" href="#">Previous Slide</a><a id="togglePanelButton" class="btn" href="#">Toggle Panel</a></div>\n<div class="rightNav"><a id="nextButton" class="btn" href="#">Next Slide</a><div id="pageNumber">0/0</div></div>');
+            navigation.inject(this.mainContainer);
+            
+            $('previousButton').addEvent('click', this.moveToPreviousSlide);
+            $('nextButton').addEvent('click', this.moveToNextSlide);
+            $('togglePanelButton').addEvent('click', this.toggleNavBar);
+            
+            window.addEvent('keydown:keys(left)', this.moveToPreviousSlide);
+            window.addEvent('keydown:keys(right)', this.moveToNextSlide);
+        },
+    
         replaceOriginalSlideToSlideLinks: function(){
-            // replace href="foil05.html" with corresponding anchor links (#5)
+            // Replace href="foil05.html" with corresponding anchor links (#5)
             var links = $$('a[href^=foil]');
             var foilSlides = $$('div.foil');
             var thisObj = this;
