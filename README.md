@@ -15,10 +15,11 @@ This was a course project developed by these awesome people:
 * Petr Zvoníček ()
 
 #For developers#
+* /Source/output-development is used for frontend development. Assets are then minimized, exported into /Source/javascript_and_stylesheets.xml and inserted into xsl-transformed HTML for end-user convenience. See 'Minifying js/css/images' in Useful links.
+
 
 ##Todo##
-* floating navBar div
-* consolidate output assets for docbook slides (images, css, js) into a single companion file 
+* consolidate output assets for docbook slides (images, css, js) into a single companion file (use Base64 for images when possible (<32KB))
 * bug?: when transforming files with the Java tool, it sends some http (:80) requests
 
 ##Useful Links##
@@ -29,6 +30,8 @@ This was a course project developed by these awesome people:
 * DocBook Project (supporting development) - [http://docbook.sourceforge.net/ Home]
 * DocBook Project – [http://sourceforge.net/projects/docbook/files/docbook-xsl/ XSL]
 microformats: http://devcheatsheet.com/tag/microformats/
+
+* Minifying js/css/images: https://github.com/cjohansen/juicer and http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool
 
 ##Contact##
 Feel free to contact us via GitHub messages.

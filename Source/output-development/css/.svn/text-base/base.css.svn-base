@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*  Written by Bixby.cz
+	CSS classes usually follow the DOM structure. Feel free to peek in.
+
+	
+	BASE.css (global styles)
+	
+	• General
+	• Print
+
+*/
+
+
+
+/* General 
+-----------------------------------------------------------------------------------------------*/
+@import url("reset.css"); /* Boilerplate https://github.com/thatcoolguy/gridless-boilerplate */
+
+html { height:100%; }
+body {
+	padding-top:2em;
+	}
+	
+.f { float:left; }
+.center { width:100%; text-align: center; }
+
+/*button*/
+a.btn:link, a.btn:active, a.btn:visited, a.btn:hover { 
+	display:block; 
+	background-position: left top !important; 
+	text-indent: -4000px;
+	overflow: hidden;
+	}
+	a.btn:hover { 
+		background-position: left bottom !important; 
+		}
+	a.btn:active {
+		position: relative;
+		top: 1px;
+		}
+
+
+
+
+
+/* Footer 
+-----------------------------------------------------------------------------------------------*/
+
+#footer {
+	}
+	
+	
+	
+	
+
+/* Docbook Slides 
+-----------------------------------------------------------------------------------------------*/
+
+html { height:100%; }
+
+.slidesBody {
+	background: #555 url('../images/slidesBg.png') repeat;
+	padding:0;
+	height:100%;
+	}
+	
+	div.titlepage {
+		text-align: center;
+	}
+	
+	div.titlepage, div.foil, div.foilgroup {
+		position: relative;
+		margin: 10px 10px 10px;
+		padding: 30px;
+		background: #fff;
+		
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-moz-box-shadow: 0 1px 4px #222;
+		-webkit-box-shadow: 0 1px 4px #222;
+		box-shadow: 0 1px 4px #222;
+		
+		min-height: 85%;
+		}
+	
+	div.leftNav, div.rightNav {
+		position:absolute;
+		color: #000;
+		top: 10px;
+		}
+	div.leftNav {
+		left: 11px;
+		}
+		div.leftNav a#previousButton {
+			margin-bottom: 6px;
+			background: url(../images/leftButton.png);
+			width: 35px;	height: 35px;
+			}
+		div.leftNav a#togglePanelButton {
+			background: url(../images/togglePanelButton.png);
+			width: 35px;	height: 35px;
+			}
+	div.rightNav {
+		right: 11px;
+		}
+		div.rightNav a#nextButton {
+			margin-bottom: 5px;
+			background: url(../images/rightButton.png);
+			width: 35px;	height: 35px;
+			}
+		div.rightNav div#pageNumber {
+			text-align: center;
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 0.7em;
+			color: #666;
+			text-shadow: 0 1px 0 #ddd;
+			width: 35px;	height: 35px;
+			}
+
+
+
+
+
+
+/* PRINT 
+-----------------------------------------------------------------------------------------------*/
+@media print {
+}
+
+
+
+
+
+
+
+
+
+
+
