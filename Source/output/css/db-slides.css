@@ -18,6 +18,10 @@
 
 html { height:100%; }
 
+#mainContainer, #mainContainer .navBarClosed {
+  margin: 0 48px;
+  }
+  
 .slidesBody {
 	background: #555 url('../images/slidesBg.png') repeat;
 	padding:0;
@@ -26,7 +30,7 @@ html { height:100%; }
 	
 	div.titlepage {
 		text-align: center;
-	}
+	  }
 	
 	div.titlepage, div.foil, div.foilgroup {
 		position: relative;
@@ -44,19 +48,14 @@ html { height:100%; }
 		}
 		h1.title {
 			text-align:center;
-		}
-	
-
-#mainContainer {
-    margin: 0 48px;
-    }
+		  }
 
 div.leftNav, div.rightNav {
 	position: absolute;
 	color: #000;
 	top: 10px;
 	}
-div.leftNav {
+div.leftNav, div.leftNav.navBarClosed {
 	left: 11px;
 	}
 	div.leftNav a#previousButton {
@@ -87,15 +86,15 @@ div.rightNav {
 
 
 /* NavBar -----------------------------------------------------------------------------------------------*/
-#mainContainer.navBarVisible {
-    margin-left: 240px;
+#mainContainer.navBarOpened {
+    margin-left: 240px; /* navBarClosed style defined above */
     }
     
-div.navBarVisible {
-	left: 200px;
-	}
+div.leftNav.navBarOpened {
+    left: 200px; /* navBarClosed style defined above */
+  	}
 	
-#navBar {
+#navBar, #navBar.navBarClosed {
 	display: block;
 	position: absolute;
 	top: 0; left:0;
@@ -105,24 +104,37 @@ div.navBarVisible {
 	overflow-y: scroll;
 	
 	background: rgba(0,0,0,0.4);
-    box-shadow:inset -2px 0 4px rgba(0,0,0,0.2);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 0.9em;
-    }
-    
-    #navBar.navBarVisible {
-        width: 190px;
-        }
-    #navBar ul {
-        list-style-type: none;
-        padding: 1em 1em;
-        }
-        #navBar li {
-            padding: 5px 0px;
+  box-shadow:inset -2px 0 4px rgba(0,0,0,0.2);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  }
+  #navBar.navBarOpened {
+      width: 190px;
+      }
+      
+  #navBar ul {
+      list-style-type: none;
+      padding: 1em 1em;
+      }
+      #navBar li {
+          }
+          #navBar div.separator {
+            position: relative;
+            left: -14px;
+            width: 1000px;  height: 1px;
+            margin: 0.6em 0;
+            background: rgba(0,0,0,0.1);
+            box-shadow:0 1px 0 rgba(255,255,255,0.1);
             }
-            #navBar a:link, #navBar a:visited, #navBar a:hover, #navBar a:active {
-                color: #fff;
-                }
+          #navBar strong {  
+            font-weight: bold;
+            }
+          #navBar a:link, #navBar a:visited, #navBar a:hover, #navBar a:active {
+            display: block;
+            color: #fff;
+            padding: 0.2em 0;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+            }
 
 
 
