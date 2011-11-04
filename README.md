@@ -1,5 +1,10 @@
 **Docbook2html5** is a simple-to-use utility for converting study materials in Docbook / Docbook Slides format into the SGML variant of HTML5. Currently available transformation stylesheets are a bit antiquated and this project attempts to fix it by fully leveraging HTML5 technologies and giving a fresh, modern feel to the output web page / presentation slides.
 
+
+##Examples##
+* Converted Docbook Slides: http://raspberryapps.com/pub/docbook2html5/slides.html
+* Converted Docbook file: http://raspberryapps.com/pub/docbook2html5/bc4.html
+
 ##Usage##
 * Download and open docbook2html5.jar file. 
 * Select the input files (Open file). 
