@@ -217,103 +217,123 @@ window.addEvent('domready', function() {
         // TODO
         // $.jStorage.set(this.slidesTitle, String.from(this.currentSlide));
 
-        // Change the anchor in URL
+        // Change slide number in the URL (#x)
         var url = window.location.toString();
         url = url.split("#")[0];
         window.location = url + "#" + (this.currentSlide+1);
 
+        return this.slides[i];
       },
 
       moveToPreviousSlide: function(){
         var el = this.slides[this.currentSlide-1];
         var previousSlide = this.slides[this.currentSlide];
 
+        // Config effects
+        var durationOfAnimation = 400
         var fx = new Fx.Tween(el, {
-          duration: 400
+          duration: durationOfAnimation,
+          transition: Fx.Transitions.Quad.easeOut
         });
         var fx2 = new Fx.Tween(el, {
-          duration: 400,
+          duration: durationOfAnimation,
           transition: Fx.Transitions.Quart.easeIn
         });
         var fx3 = new Fx.Tween(previousSlide, {
-          duration: 400,
+          duration: durationOfAnimation,
           transition: Fx.Transitions.Quart.easeIn
         });
 
+        // Show the new slide
         this.show(this.currentSlide - 1);
 
-        var leftPos = -window.getSize().x;
+        // Compute and init styles for the coming slide
+        var leftPositionToTweenTo = el.getComputedSize().computedLeft + 17;
         el.setStyles({
-          'width': this.slideWidth,
+          'width': el.getComputedSize().width,
           'top': 0,
-          'left': leftPos,
+          'left': -window.getSize().x, // move to the left
           'position': 'absolute',
           'z-index': 10
         });
 
-        var classObj = this;
+        var thisObj = this;
 
-        fx.start('left', leftPos, 0).chain(function(){
-          classObj.hideAllSlides();
-          classObj.show(classObj.currentSlide);
-        });
-
-        fx2.start('opacity', 1, 1).chain(function(){
+        // Define fx1 - move the slide to the right and then change some styles
+        fx.start('left', el.getStyle('left'), leftPositionToTweenTo).chain(function(){
+          thisObj.hideAllSlides();
+          thisObj.show(thisObj.currentSlide);
           el.setStyles({
             'position': 'relative',
             'z-index': 0,
             'top': 0,
-            'width': 'auto'
+            'left': 0,
+            //'width': 'auto',
           });
-          classObj.hideAllSlides();
-          classObj.show(classObj.currentSlide);
+        });
+
+        // Define fx3 - fade in the slide and then change some styles
+        fx2.start('opacity', 1, 1).chain(function(){
+          thisObj.hideAllSlides();
+          thisObj.show(thisObj.currentSlide);
+          el.setStyles({
+            'position': 'relative',
+            'z-index': 0,
+            'top': 0,
+            'left': 0,
+            //'width': 'auto',
+          });
         });
 
         fx3.start('opacity', 0.7).chain(function(){
           previousSlide.setStyle('opacity', 1);
-          classObj.hideAllSlides();
-          classObj.show(classObj.currentSlide);
+          thisObj.hideAllSlides();
+          thisObj.show(thisObj.currentSlide);
         });
       },
 
       moveToNextSlide: function(){
         var el = this.slides[this.currentSlide];
 
+        // Config effects
+        var durationOfAnimation = 500;
         var fx = new Fx.Tween(el, {
-          duration: 400
+          duration: durationOfAnimation
         });
         var fx2 = new Fx.Tween(el, {
-          duration: 400,
-          transition: Fx.Transitions.Quad.easeOut
+          duration: durationOfAnimation,
+          transition: Fx.Transitions.Quad.easeInOut
         });
 
-        this.show(this.currentSlide + 1);
+        // Show the new slide
+        var newSlide = this.show(this.currentSlide + 1);
 
-        this.slideWidth = el.getComputedSize().width;
-
+        // Compute and init styles for the leaving slide
+        //alert(el.getComputedSize().padding-left)
         el.setStyles({
-          'width': this.slideWidth,
+          'width': el.getComputedSize().width,
+          'left': el.getComputedSize().computedLeft + 17,
           'top': 0,
           'position': 'absolute',
           'z-index': 10
         });
 
-        var tempMainObj = this;
-        fx2.start('left', 0, -window.getSize().x).chain(function(){
+        // Define fx1 - move the slide to left and then change some styles
+        fx2.start('left', el.getStyle('left'), -window.getSize().x).chain(function(){
           el.setStyles({
             'display': 'none',
             'left': 0
           });
-          //tempMainObj.hideAllSlides();
-          //tempMainObj.show(this.currentSlide);
         });
 
+        // Define fx2 - slightly fade away the slide and then change some styles
         fx.start('opacity', 1, 0.8).chain(function(){
           el.setStyles({
             'position': 'relative',
             'z-index': 2,
             'top': 0,
-            'width': 'auto',
+            'left': 0,
+            //'width': 'auto',
             'opacity': 1
           });
         });
