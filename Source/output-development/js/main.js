@@ -317,11 +317,15 @@ window.addEvent('domready', function() {
 
       // Define fx1 - move the slide to left and then change back the styles
       fx2.start('left', el.getStyle('left'), -window.getSize().x).chain(function(){
+        thisObj.hideAllSlides();
+        thisObj.show(thisObj.currentSlide);
         revertStyles()
       });
 
       // Define fx2 - slightly fade away the slide and then change back the styles
       fx.start('opacity', 1, 0.8).chain(function(){
+        thisObj.hideAllSlides();
+        thisObj.show(thisObj.currentSlide);
         revertStyles()
       });
     }
