@@ -104,7 +104,7 @@ window.addEvent('domready', function() {
     },
 
     initNavBar: function(){
-      var thisObj = this;
+      var that = this;
       var navBarList = new Element('ul').inject(document.body)
       this.navBar = new Element('div#navBar').wraps(navBarList)
       this.isNavBarVisible = false;
@@ -117,8 +117,8 @@ window.addEvent('domready', function() {
         link.set('href', '#' + (index + 1))
         link.addEvent('click', function(e){
           e.stop()
-          thisObj.hideAllSlides();
-          thisObj.show(index);
+          that.hideAllSlides();
+          that.show(index);
         });
 
         // If the slide is a sort of header slide, insert a separator above the link 
@@ -135,14 +135,14 @@ window.addEvent('domready', function() {
     },
 
     toggleNavBar: function(){
-      thisObj = this;
+      that = this;
       [this.navBar, this.mainContainer, $$('div.leftNav')[0]].each(function(el){
-        //if (thisObj.isNavBarVisible) 
+        //if (that.isNavBarVisible) 
         el.toggleClass('navBarOpened')
         //el.set('morph', {duration: 'long'});
         el.morph('.navBarOpened')
         el.morph('.navBarClosed')
-        thisObj.isNavBarVisible = !thisObj.isNavBarVisible
+        that.isNavBarVisible = !that.isNavBarVisible
       })
     },
 
@@ -162,7 +162,7 @@ window.addEvent('domready', function() {
       // Replace href="foil05.html" with corresponding anchor links (#5)
       var links = $$('a[href^=foil]');
       var foilSlides = $$('div.foil');
-      var thisObj = this;
+      var that = this;
 
       links.each(function(link){
         var hrefString = link.get('href');
@@ -173,14 +173,14 @@ window.addEvent('domready', function() {
           var slide = foilSlides[foilNo-1];
 
           // Get index in slides[] array
-          var slideIndex = thisObj.slides.indexOf(slide);
+          var slideIndex = that.slides.indexOf(slide);
           slideIndex = (slideIndex > -1) ? slideIndex : 1;
           link.set('href', '#' + (slideIndex + 1));
 
           link.addEvent('click', function(e){
             e.stop()
-            thisObj.hideAllSlides();
-            thisObj.show(slideIndex);
+            that.hideAllSlides();
+            that.show(slideIndex);
           });
         }
       });
@@ -223,6 +223,7 @@ window.addEvent('domready', function() {
     },
 
     moveToPreviousSlide: function(){
+      var that = this;
       var el = this.slides[this.currentSlide-1];
       var previousSlide = this.slides[this.currentSlide];
 
@@ -263,19 +264,17 @@ window.addEvent('domready', function() {
         });
       }
 
-      var thisObj = this;
-
       // Define fx1 - move the slide to the right and then change back the styles
       fx.start('left', el.getStyle('left'), leftPositionToTweenTo).chain(function(){
-        thisObj.hideAllSlides();
-        thisObj.show(thisObj.currentSlide);
+        that.hideAllSlides();
+        that.show(that.currentSlide);
         revertStyles();
       });
 
       // Define fx3 - fade in the slide and then change back the styles
       fx2.start('opacity', 1, 1).chain(function(){
-        thisObj.hideAllSlides();
-        thisObj.show(thisObj.currentSlide);
+        that.hideAllSlides();
+        that.show(that.currentSlide);
         revertStyles();
       });
     },
@@ -317,27 +316,30 @@ window.addEvent('domready', function() {
 
       // Define fx1 - move the slide to left and then change back the styles
       fx2.start('left', el.getStyle('left'), -window.getSize().x).chain(function(){
-        thisObj.hideAllSlides();
-        thisObj.show(thisObj.currentSlide);
+        that.hideAllSlides();
+        that.show(that.currentSlide);
         revertStyles()
       });
 
       // Define fx2 - slightly fade away the slide and then change back the styles
       fx.start('opacity', 1, 0.8).chain(function(){
-        thisObj.hideAllSlides();
-        thisObj.show(thisObj.currentSlide);
+        that.hideAllSlides();
+        that.show(that.currentSlide);
         revertStyles()
       });
     }
 
   });
   
+  /* Determines if the document is of DB Slides format */
   DocbookPresentation.isApplicableHere = function() {
     return $$('.foil').length > 0;
   }
 
 
-  if (DocbookPresentation.isApplicableHere) { // Determines if the document is of DB Slides format
+
+  
+  if (DocbookPresentation.isApplicableHere()) {
     new DocbookPresentation();
   }
 
