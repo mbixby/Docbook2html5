@@ -20,7 +20,7 @@ This was a course project developed by these awesome people:
 * Petr Zvoníček ()
 
 #For developers#
-* /Source/output-development is used for frontend development. Assets are then minimized, exported into /Source/javascript_and_stylesheets.xml and inserted into xsl-transformed HTML for end-user convenience. See 'Minifying js/css/images' in Useful links.
+* /Source/output-development is used for frontend development. Assets are then minimized, exported into /Source/javascript_and_stylesheets.xml and inserted into xsl-transformed HTML for end-user convenience. Run minify.rb from shell to do this all automatically. (Requires Juicer; install by running 'gem install juicer')
 
 
 ##Todo##

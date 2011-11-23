@@ -103,6 +103,7 @@ div.leftNav.navBarOpened {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	
+	background: rgb(90,94,103);
 	background: rgba(0,0,0,0.4);
   box-shadow:inset -2px 0 4px rgba(0,0,0,0.2);
   font-family: Helvetica, Arial, sans-serif;

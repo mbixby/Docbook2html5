@@ -6,7 +6,6 @@
  * @depend mt-more.js
  */
 
-
 window.addEvent('domready', function() {
 
 
@@ -65,13 +64,13 @@ window.addEvent('domready', function() {
 
 
     initHTMLBodyForSlides: function(){
-      document.body.addClass('slidesBody');
+      $(document.body).addClass('slidesBody');
 
       // Wrap html in div container (this activates styles in db-slides.css (minified into base.min.css))
       var container = new Element('div#mainContainer');
       this.mainContainer = container
-      container.adopt(document.body.getChildren());
-      container.inject(document.body);
+      container.adopt($(document.body).getChildren());
+      container.inject($(document.body));
 
       // Create and init prev/next buttons and navBar
       this.initNavigationButtons();
@@ -105,7 +104,7 @@ window.addEvent('domready', function() {
 
     initNavBar: function(){
       var that = this;
-      var navBarList = new Element('ul').inject(document.body)
+      var navBarList = new Element('ul').inject($(document.body))
       this.navBar = new Element('div#navBar').wraps(navBarList)
       this.isNavBarVisible = false;
       
@@ -259,7 +258,7 @@ window.addEvent('domready', function() {
           'position': 'relative',
           'z-index': 0,
           'top': 0,
-          'left': 0,
+          'left': 0
           //'width': 'auto',
         });
       }
@@ -280,10 +279,11 @@ window.addEvent('domready', function() {
     },
 
     moveToNextSlide: function(){
-      var el = this.slides[this.currentSlide];
-
+      var el = this.slides[this.currentSlide]
+      var that = this
+      
       // Config effects
-      var durationOfAnimation = 500;
+      var durationOfAnimation = 500
       var fx = new Fx.Tween(el, {
         duration: durationOfAnimation
       });
@@ -293,7 +293,7 @@ window.addEvent('domready', function() {
       });
 
       // Show the new slide
-      var newSlide = this.show(this.currentSlide + 1);
+      var newSlide = this.show(this.currentSlide + 1)
 
       // Compute and init styles for the leaving slide
       el.setStyles({
@@ -311,7 +311,7 @@ window.addEvent('domready', function() {
           'left': 0,
           //'width': 'auto',
           'opacity': 1
-        });
+        })
       }
 
       // Define fx1 - move the slide to left and then change back the styles
